@@ -1,0 +1,317 @@
+/* Сброс стилей для всех элементов */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для всего документа */
+body 
+{
+    font-family: Arial, sans-serif; /* Шрифт для всего текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    background: #f4f4f4; /* Фоновый цвет страницы */
+    color: #333; /* Основной цвет текста */
+	/*padding: 0 0 0 40px;*/
+}
+
+/* Видео на фоне страницы */
+.background-video 
+{
+    position: fixed; /* Фиксированное позиционирование */
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Задний план */
+    background-size: cover; /* Растягивание видео на всю ширину и высоту */
+	opacity: 0.3; /* Прозрачность фона */
+}
+
+/* Шапка сайта (header) */
+header 
+{
+    background: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 30px 0 0 0; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    position: fixed; /* Фиксированное позиционирование */
+    width: 100%; /* Ширина 100% от родителя */
+    top: 0;
+    left: 0;
+    z-index: 600; /* Высокий уровень плана */
+	/*margin-top: 100px;*/
+}
+
+/* Стили для навигационного меню в шапке */
+header nav ul 
+{
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    display: flex; /* Выводим элементы в строку */
+    justify-content: center; /* Выравнивание по центру */
+}
+
+header nav ul li 
+{
+    margin: 0 1rem; /* Отступы между элементами */
+}
+
+header nav ul li a 
+{
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+/* Элемент справа в шапке (язык или другая информация) */
+.header-right 
+{
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов вправо */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    height: 50%; /* Высота подстраивается под высоту шапки */
+    margin: 0 20px 0 0; /* Отступы */
+}
+
+.flag-icon /*иконка языка*/
+{
+    font-size: 15px; /* Размер иконки (можно настроить по необходимости) */
+}
+
+/* Общие стили для абзацев на странице */
+p 
+{
+    margin: 20px 0 20px 20px; /* Отступы абзацев */
+	padding: 0 0 0 50px;
+}
+
+.p
+{
+	padding: 0 0 0 0;
+	
+}
+
+/* Заголовок с классом 'h' */
+.h 
+{
+    margin: 20px 10px 0 70px; /* Отступы заголовка */
+	padding: 0 0 0 10px;
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    z-index: 1; /* Позиционируем выше других элементов */
+    position: relative; /* Относительное позиционирование */
+    animation: backgroundChange 5s infinite alternate; /* Анимация фона */ 
+	
+}
+
+/* Заголовок с классом 'h3' */
+.h3 
+{
+    margin: 20px 20px 0 20px; /* Отступы заголовка */
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    z-index: 1; /* Позиционируем выше других элементов */
+    position: relative; /* Относительное позиционирование */
+    animation: backgroundChange 5s infinite alternate; /* Анимация фона */
+	
+}
+
+/*Анимация для изменения фона заголовка*/ 
+@keyframes backgroundChange 
+{
+    0% { background-color: rgba(255, 255, 255, 0.8); } Начальный цвет
+    25% { background-color: rgba(255, 105, 97, 0.8); } Красный цвет
+    50% { background-color: rgba(135, 206, 250, 0.8); } Голубой цвет
+    75% { background-color: rgba(64, 224, 208, 0.8); } Бирюзовый цвет
+    100% { background-color: rgba(144, 238, 144, 0.8); } Зеленый цвет
+}
+
+/* Баннер страницы */
+#banner 
+{
+    background: #ffdd57; /* Цвет фона баннера */
+    color: #333; /* Цвет текста */
+    padding: 0 10px 0 10px; /* Внутренние отступы */
+    position: -webkit-sticky; /* Поддержка вебкит-стикера */
+    position: sticky; /* Стикерная позиция */
+    top: 80px; /* Отступ от верха */
+    z-index: 500; /* Высокий уровень плана */
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.7); /* Тень */
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+    white-space: nowrap; /* Запрещение переноса текста */
+}
+
+/* При наведении на раздел услуг меняем цвет текста в баннере */
+#banner:hover 
+{
+    color: white; /* Цвет текста при наведении */
+}
+
+/* Стили для текста внутри баннера */
+#banner p 
+{
+    font-weight: bold; /* Жирный текст */
+    font-size: 15px; /* Размер шрифта */
+	text-align: center; /* Выравнивание текста по центру */
+    animation: TextAnim 5s linear alternate infinite; /* Анимация текста */
+}
+
+/* Анимация для текста в баннере */
+@keyframes TextAnim 
+{
+    from { margin-left: 0px; } /* Начальная позиция текста */
+    to { margin-left: 400px; } /* Конечная позиция текста */
+}
+
+
+/* Основные стили для секций на странице */
+section 
+{
+    padding: 0 1rem 0 1rem; /* Внутренние отступы секций */
+    margin-top: 5px; /* Отступ сверху, учитывая высоту шапки */
+}
+
+/* Невидимый блок перед каждым элементом <section>, который сдвигает содержимое вниз на высоту заголовка, когда  нажимается якорная ссылка. */
+section::before 
+{
+  content: "";
+  display: block;
+  height: 105px; /* Высота заголовка */
+  margin: -105px 0 0; /* Отрицательный верхний отступ для компенсации высоты */
+}
+
+/* Дополнительная анимация для изменения фона */
+@keyframes backgroundChange {
+    0% { background-color: rgba(255, 255, 255, 0.8); }
+    25% { background-color: rgba(255, 105, 97, 0.8); } /* Насыщенный красный */
+    50% { background-color: rgba(135, 206, 250, 0.8); } /* Насыщенный голубой */
+    75% { background-color: rgba(64, 224, 208, 0.8); } /* Насыщенный бирюзовый */
+    100% { background-color: rgba(144, 238, 144, 0.8); } /* Насыщенный зеленый */
+}
+
+/* Стили для секции с id="home" */
+#home 
+{
+    background-image: url('http://mediakartz.com/images/bg1final.jpg'); /* Фоновое изображение */
+    background-color: grey; /* Фоновый цвет (запасной) */
+    background-size: cover; /* Растягивание изображения на всю площадь */
+    background-repeat: no-repeat; /* Запрет повторения изображения */
+    background-position: center center; /* Центрирование изображения */
+    opacity: 0.9; /* Прозрачность фона */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 100%; /* Ширина равная 100% от родительского элемента */
+	margin-top: 70px; /* Внутренние отступы */
+}
+
+/* Стили для названия фирмы */
+#firmname 
+{
+    color: FireBrick; /* Цвет текста */
+    font-size: 5em; /* Размер шрифта */
+    font-style: italic; /* Курсивное начертание */
+    font-weight: bold; /* Жирное начертание */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+	padding-left: 40px;
+}
+
+#works 
+{
+    padding: 60px 40px 10px 0; /* Внутренние отступы */
+
+}
+
+/* Контейнер для услуг */
+.services-container 
+{
+    display: flex; /* Отображение в виде строки */
+    justify-content: space-around; /* Выравнивание элементов по горизонтали с промежутками между ними */
+    flex-wrap: wrap; /* Разрешение переноса элементов на новую строку */
+	padding: 0 0 0 50px;
+	height:500px;
+}
+
+/* Каждая отдельная услуга */
+.service 
+{
+    background: #fff; /* Цвет фона */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 10px; /* Закругление углов */
+    padding: 1rem; /* Внутренние отступы */
+    width: 30%; /* Ширина блока */
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.7); /* Тень */
+    margin: 1rem 0; /* Внешние отступы */
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+	transition: transform 1s;/* Плавное увеличение блока при наведении */
+}
+
+/* При наведении на услугу изменяем стиль текста */
+.service:hover 
+{
+    color: FireBrick; /* Цвет текста при наведении */
+    font-weight: bold; /* Жирный текст */
+	transform: scale(1.1);/* Увеличиваем блок на 10% при наведении */
+}
+
+
+.service h3 
+{
+    margin-bottom: 0.5rem; /* Нижний отступ для заголовка услуги */
+}
+
+
+/* Выравнивание элемента слева */
+.float-left 
+{
+    float: left; /* Выравнивание по левому краю */
+    margin: 0 20px 20px 70px; /* Отступы */
+}
+
+/* Выравнивание элемента справа */
+.float-right 
+{
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 10px 20px 20px; /* Отступы */
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    /* Изменения для экранов до 768px ширины */
+    .services-container {
+        flex-direction: column; /* Располагаем элементы в столбец */
+        align-items: center; /* Выравнивание по центру */
+    }
+
+    .service {
+        width: 80%; /* Уменьшаем ширину блоков */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Изменения для экранов до 480px ширины */
+    header nav ul {
+        flex-direction: column; /* Располагаем элементы в столбец */
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0; /* Отступы между пунктами меню */
+    }
+
+    section {
+        padding: 3rem 1rem 1rem; /* Внутренние отступы секций */
+    }
+}
+
+/* Footer  сайта */
+footer 
+{
+    background: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px 0 20px 0; /* Внутренние отступы */
+	
+    position: relative; /* Относительное позиционирование */
+    bottom: 0; /* Помещаем внизу страницы */
+    width: 100%; /* Ширина 100% от родительского элемента */
+	z-index: 600; /* Высокий уровень плана */
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РИК - Main Page </title><!--заголовок в закладке-->
+    <link rel="stylesheet" href="styles\style.css">
+	<link rel="stylesheet" href="styles\menustyle.css">
+	<link rel="shortcut icon" href=".\images\ico.ico"> <!--для значка в закладке-->
+	
+	<!--скрипт анимации бокового меню с помощью jquery-->
+	<script src="scripts\jquery-3.6.0.min.js"></script>
+	<script src="scripts\script.js"></script> <!-- Подключаем внешний JavaScript файл -->
+	
+</head>
+
+<body>
+	<video class="background-video" muted="muted" autoplay="autoplay" loop="loop" playsinline="playsinline">
+        <source src="videos/background.mp4" type="video/mp4">
+    </video>
+	
+	<div class="overlay"></div> <!-- Элемент затемнения -->
+	
+	<!--Боковое меню-->
+	<div class="vertical-menu">
+    <a style="padding: 120px 0 10px 5px;">МЕНЮ</a>
+    <a href="#"><span class="icon"><img class="img" src="images/about.png"></span><span class="menu-text">О НАС</span></a>
+    <a href="#"><span class="icon"><img class="img" src="images/history.png"></span><span class="menu-text">НАША ИСТОРИЯ</span></a>
+    <a href="#"><span class="icon"><img class="img" src="images/price.png"></span><span class="menu-text">ЦЕНЫ</span></a>
+    <a href="#"><span class="icon"><img class="img" src="images/team.png"></span><span class="menu-text">КОМАНДА</span></a>
+     <a href="#" id="register-link"><span class="icon"><img class="img" src="images/pencil.png"></span><span class="menu-text">РЕГИСТРАЦИЯ</span></a>
+	</div>
+	
+	 <!-- Login Modal -->
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+		
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul><!--якорная ссылка с отступом-->
+			    <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+				<li><a href="#" id="works-link">Наши объекты</a></li> <!--открытие через javascript-->
+            </ul>
+        </nav>
+		 <div class="header-right">
+            <span class="flag-icon">🇷🇺 РУС</span>
+        </div>
+    </header>
+	
+	<!-- Work area-->
+	<div id="banner">
+        <p>Специальное предложение! Получите скидку 20% на все услуги!</p>
+    </div>
+    
+	
+    <section id="home">
+	    <h1 id="firmname">Строительная компания <span style="color: LightSeaGreen">"РиК"</span></h1>
+		<h2>Добро пожаловать на наш сайт</h2>
+        <p class="p";>Здесь вы найдете всю необходимую информацию о нас и наших услугах.</p>
+    </section>
+	
+	
+	
+    <section id="about">
+        <h2 class="h">О нас</h2>
+        	<div>
+				<span style="color: black">
+				<img src="images\cranes.jpg" alt="cranes" class="float-left" width="500">
+				
+				<p style="color:black;font-size:30px;font-weight: bold;">Мы профессиональная команда, работающая в сфере строительства.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero tortor, feugiat eu eleifend sed, mollis sit amet odio. Suspendisse potenti. Pellentesque mauris tortor, porttitor sit amet molestie non, vulputate iaculis elit. Sed non accumsan lacus. Quisque ut mauris nec sem tincidunt venenatis. Mauris nec diam est. Integer sit amet mauris eget leo vulputate euismod. In hac habitasse platea dictumst. Ut at nunc euismod, viverra ex sed, luctus ligula. Ut at diam id justo dignissim lacinia. Aliquam aliquet, nisl euismod facilisis vestibulum, risus arcu tincidunt sem, quis viverra mauris augue et neque. Sed sit amet facilisis tellus, quis faucibus metus. In feugiat rutrum pulvinar. Vivamus finibus in purus vel pharetra. Vivamus sed sagittis arcu.</p>
+
+				<p>Donec sit amet maximus sapien. <span style="color:#ff00e5;font-size:34px;font-style: italic;">In commodo ligula ut justo semper, eget placerat ligula semper. </span>Aenean ornare tortor ac porttitor egestas. Fusce maximus vel risus et vehicula. Etiam vitae velit quis libero luctus volutpat vel a magna. Nunc ut mollis augue, vitae posuere nulla. Nullam augue purus, fermentum sit amet ante sed, viverra tincidunt quam. Nam euismod ac nisl ut consequat. Donec placerat efficitur leo, sed posuere metus laoreet a. Fusce vitae euismod felis. Donec placerat elit turpis. Phasellus vel vestibulum nunc. Aenean rhoncus, enim sit amet faucibus auctor, libero tortor efficitur orci, in interdum leo risus eget magna. Suspendisse sagittis tellus et augue lacinia, at sollicitudin mauris bibendum.</p>
+
+				<img src="images\ingeneer.jpg" alt="ingeneer" class="float-right" width="500">
+
+				<p>Etiam in tincidunt mi. Curabitur eleifend venenatis turpis at auctor. Praesent ultrices nulla et aliquet efficitur. Proin commodo luctus dignissim. Sed aliquet ex id tellus semper consectetur. Duis sodales turpis vel ante vestibulum venenatis. Integer sit amet lectus bibendum, iaculis erat in, placerat libero. Morbi sollicitudin ante quis est congue sagittis. Donec ut leo blandit, volutpat massa id, ullamcorper turpis. Phasellus tempus porttitor tortor non cursus. Vestibulum in libero quis tellus mollis malesuada et in lectus. Integer auctor leo ut faucibus suscipit. Suspendisse vel ultricies mauris. Praesent sodales arcu enim. Suspendisse potenti.</p>
+
+				<p>Integer mollis, nisl quis sagittis dignissim, quam tortor sodales erat, at euismod arcu urna in eros. Quisque semper nibh vel mi interdum aliquet. Aenean eleifend lectus lacus, sed congue mi porta nec. In ut tortor commodo dui dignissim posuere sit amet nec massa. Cras sit amet arcu efficitur, consequat nisi vitae, pharetra lectus. Phasellus ut mauris dignissim, ultrices quam et, pulvinar odio. Praesent id turpis quis nibh pulvinar elementum. Sed vehicula arcu at neque laoreet, eu luctus ipsum semper. Sed non rutrum lectus. Quisque dignissim molestie nibh elementum vestibulum. Sed finibus nibh ac velit commodo accumsan ut a est. Proin condimentum urna sed tellus convallis pretium. Vestibulum lacinia lectus in massa porttitor imperdiet.</p>
+				
+				<p style="color:red;font-size:20px;font-style: italic;">Proin vitae venenatis odio, id consectetur lacus. Vestibulum sit amet arcu ac dolor convallis tincidunt in vitae orci. Quisque laoreet luctus augue. Ut consequat vestibulum risus vel volutpat. Donec enim est, consequat a dui congue, mattis vulputate ante. Nunc euismod dictum ante, sit amet gravida nisl vulputate a. Pellentesque consectetur malesuada libero, sit amet maximus mauris viverra vitae. Aenean faucibus enim in lorem mattis hendrerit. Aenean interdum, ex eu rutrum pellentesque, ante lorem iaculis velit, ut vehicula nulla justo sit amet sem. Donec in mauris pulvinar, aliquet sapien sed, convallis nulla. Praesent dictum facilisis euismod. Nam et mi sem. Maecenas porta molestie ante in varius. Pellentesque elementum, nulla ac viverra mollis, lectus sapien eleifend velit, placerat accumsan nisl ex a lectus.</p>
+						
+				</span>
+			</div>
+    </section>
+    
+    <section id="services">
+        <h2 class="h">Наши услуги</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3 class="h3" style="text-align: center">Строительные и проектные работы</h3>
+                <p class="p";>Качественное выполнение работ всех видов и любой сложности в соответствии с нормативными требованиями</p>
+				
+            </div>
+            <div class="service">
+                <h3 class="h3" style="text-align: center">Риэлторские услуги</h3>
+                <p class="p";>Сопровождение сделок любой сложности, трейд-ин недвижимости, </p>
+            </div>
+            <div class="service">
+                <h3 class="h3" style="text-align: center">Электронный документооборот</h3>
+                <p class="p";>Собственная уникальная CRM-система</p>
+            </div>
+			</div>
+			<div>
+			    <span style="color: black">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero tortor, feugiat eu eleifend sed, mollis sit amet odio. Suspendisse potenti. Pellentesque mauris tortor, porttitor sit amet molestie non, vulputate iaculis elit. Sed non accumsan lacus. Quisque ut mauris nec sem tincidunt venenatis. Mauris nec diam est. Integer sit amet mauris eget leo vulputate euismod. In hac habitasse platea dictumst. Ut at nunc euismod, viverra ex sed, luctus ligula. Ut at diam id justo dignissim lacinia. Aliquam aliquet, nisl euismod facilisis vestibulum, risus arcu tincidunt sem, quis viverra mauris augue et neque. Sed sit amet facilisis tellus, quis faucibus metus. In feugiat rutrum pulvinar. Vivamus finibus in purus vel pharetra. Vivamus sed sagittis arcu.</p>
+
+				<p>Donec sit amet maximus sapien. In commodo ligula ut justo semper, eget placerat ligula semper. Aenean ornare tortor ac porttitor egestas. Fusce maximus vel risus et vehicula. Etiam vitae velit quis libero luctus volutpat vel a magna. Nunc ut mollis augue, vitae posuere nulla. Nullam augue purus, fermentum sit amet ante sed, viverra tincidunt quam. Nam euismod ac nisl ut consequat. Donec placerat efficitur leo, sed posuere metus laoreet a. Fusce vitae euismod felis. Donec placerat elit turpis. Phasellus vel vestibulum nunc. Aenean rhoncus, enim sit amet faucibus auctor, libero tortor efficitur orci, in interdum leo risus eget magna. Suspendisse sagittis tellus et augue lacinia, at sollicitudin mauris bibendum.</p>
+
+				<p style="color:#05fab0;font-size:24px;font-weight: bolt;">Etiam in tincidunt mi. Curabitur eleifend venenatis turpis at auctor. Praesent ultrices nulla et aliquet efficitur. Proin commodo luctus dignissim. Sed aliquet ex id tellus semper consectetur. Duis sodales turpis vel ante vestibulum venenatis. Integer sit amet lectus bibendum, iaculis erat in, placerat libero. Morbi sollicitudin ante quis est congue sagittis. Donec ut leo blandit, volutpat massa id, ullamcorper turpis. Phasellus tempus porttitor tortor non cursus. Vestibulum in libero quis tellus mollis malesuada et in lectus. Integer auctor leo ut faucibus suscipit. Suspendisse vel ultricies mauris. Praesent sodales arcu enim. Suspendisse potenti.</p>
+
+				<p>Integer mollis, nisl quis sagittis dignissim, quam tortor sodales erat, at euismod arcu urna in eros. Quisque semper nibh vel mi interdum aliquet. Aenean eleifend lectus lacus, sed congue mi porta nec. In ut tortor commodo dui dignissim posuere sit amet nec massa. Cras sit amet arcu efficitur, consequat nisi vitae, pharetra lectus. Phasellus ut mauris dignissim, ultrices quam et, pulvinar odio. Praesent id turpis quis nibh pulvinar elementum. Sed vehicula arcu at neque laoreet, eu luctus ipsum semper. Sed non rutrum lectus. Quisque dignissim molestie nibh elementum vestibulum. Sed finibus nibh ac velit commodo accumsan ut a est. Proin condimentum urna sed tellus convallis pretium. Vestibulum lacinia lectus in massa porttitor imperdiet.</p>
+				
+				<p>Proin vitae venenatis odio, id consectetur lacus. Vestibulum sit amet arcu ac dolor convallis tincidunt in vitae orci. Quisque laoreet luctus augue. Ut consequat vestibulum risus vel volutpat. Donec enim est, consequat a dui congue, mattis vulputate ante. Nunc euismod dictum ante, sit amet gravida nisl vulputate a. Pellentesque consectetur malesuada libero, sit amet maximus mauris viverra vitae. Aenean faucibus enim in lorem mattis hendrerit. Aenean interdum, ex eu rutrum pellentesque, ante lorem iaculis velit, ut vehicula nulla justo sit amet sem. Donec in mauris pulvinar, aliquet sapien sed, convallis nulla. Praesent dictum facilisis euismod. Nam et mi sem. Maecenas porta molestie ante in varius. Pellentesque elementum, nulla ac viverra mollis, lectus sapien eleifend velit, placerat accumsan nisl ex a lectus.</p>
+				</span>
+		</div>
+    </section>
+	
+	   
+    <section id="contact">
+        <h2 class="h">Контакты</h2>
+        <p style="color: black">Свяжитесь с нами для получения дополнительной информации.</p>
+        <address>
+		    <span style="font-style: italic">
+			<p style="color: blue">Адрес: г.Челябинск, ул.Труда, д.157, офис 77</p>
+            <p style="color: blue">Email: info@example.com</p>
+            <p style="color: blue">Телефон: +7 (123) 456-7890</p>
+			</span>
+        </address>
+		
+		<!--Интерактивная карта-->
+		<div id="map-container" style= "padding: 0 0 10px 60px; "></div>
+		
+		<!--Информация о текущей погоде в Челябинске-->
+		<div id="weather-container" >
+        <h2 style= "padding: 20px 10px 0 0; text-align: right">Погода в Челябинске</h2>
+        <p id="weather-info" style= "padding: 0 10px 10px 0; text-align: right">Загрузка...</p>
+		</div>
+		
+    </section>
+    
+	<!-- Footer -->
+    <footer>
+	
+        <p>&copy;<span id="current-year"></span> Max Klimov Design Agency. All rights reserved.</p>
+
+    </footer>
+	
+</body>
+</html>
